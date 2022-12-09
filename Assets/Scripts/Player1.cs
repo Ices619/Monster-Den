@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player1 : MonoBehaviour
 {
+    // Sets every variable to its name
     public string left;
     public string right;
     public string up;
@@ -15,16 +16,17 @@ public class Player1 : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
+    // Sets the variables of rigidbody2d to a suitable variable to use and other variables set
     public Rigidbody2D myRigidcharacter;
     public float lastFired;
     public GameObject bullet;
-    // public float power = 1500f;
+    // move speed is set to 2f speed
     public float moveSpeed = 2f;
 
 
     void Start()
     {
+        //Keeps count of how many shots have I fired.
         lastFired = 0;
         myRigidcharacter = this.GetComponent<Rigidbody2D>();
 
@@ -35,7 +37,7 @@ public class Player1 : MonoBehaviour
     void Update()
     {
 
-
+        //In this void Update, every move is used from the above variables such as up, down, right and fire ETC
         if (Input.GetKey(up))
         {
             this.transform.Translate(new Vector3(0f, 5f, 0f)
@@ -81,6 +83,7 @@ public class Player1 : MonoBehaviour
 
         if (Input.GetKey(fire))
         {
+            //Spawns the variable bullet prefab when I button is clicked
             if (Time.time > lastFired + 1)
             {
                 Instantiate(bullet, this.transform.position +

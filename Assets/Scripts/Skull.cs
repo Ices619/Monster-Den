@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Skull : MonoBehaviour
 {
+    //Player1 is seen as a trnsform and loads sprite variable
     public Transform Player1;
     public float speed;
     private SpriteRenderer spriteRenderer;
@@ -17,10 +18,11 @@ public class Skull : MonoBehaviour
 
     public void Awake()
     {
+        //Gets the Sprite from unity
         this.spriteRenderer = this.GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    // Update void tells the skull sprite to follow Player1 and will flip the sprite image depending  on the player direction with a localScale
     void Update()
     {
         distance = Vector3.Distance(transform.position, Player1.transform.position);

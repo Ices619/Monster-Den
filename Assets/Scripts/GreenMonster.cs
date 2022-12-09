@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GreenMonster : MonoBehaviour
 {
+    //Sets variables
     public Transform Player1;
     public float speed;
     private SpriteRenderer spriteRenderer;
@@ -20,7 +21,7 @@ public class GreenMonster : MonoBehaviour
         this.spriteRenderer = this.GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    // Update is used to follow the player and flip the sprite in the direction of the player
     void Update()
     {
         distance = Vector3.Distance(transform.position, Player1.transform.position);

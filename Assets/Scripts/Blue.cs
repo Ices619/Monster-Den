@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Blue : MonoBehaviour
 {
+    //Sets variables
     public GameObject Player1;
     public float speed;
 
     private float distance;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    // in void Update, the slime will follow after the player1 gameobject
     void Update()
     {
         distance = Vector3.Distance(transform.position, Player1.transform.position);

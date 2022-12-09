@@ -4,17 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
-    //public Text Score;
-    //private GameStateManager gsm;
-    // Start is called before the first frame update
+    //Set the variable to text for scoreText and calls GameStateManager gsm in this script
+    public Text scoreText;
+    private GameStateManager gsm;
+    //Start is called before the first frame update
     void Start()
     {
-        //gsm = GameObject.Find("GameStateManager").GetComponent<GameStateManager>;
+        //finds the GameStateManager Object in unity
+        gsm = GameObject.Find("GameStateManager").GetComponent<GameStateManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Score.text = gsm.ToString();
+        //Displays the score
+        scoreText.text = "Score: " + gsm.getScore();
     }
 }

@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;//access scenemanager and allows acces to other scenes
 public class MainMenu : MonoBehaviour
 {
+    //These public voids have different variables and each one will load a different scene 
     public void GameStart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -27,6 +28,16 @@ public class MainMenu : MonoBehaviour
     public void GameStartAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 4);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Start menu");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
+    //Set the score up so the system can keep count
     public GameObject prefab;
     public int howMany;
     private int score;
@@ -28,6 +29,7 @@ public class GameStateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Makes sure that this object onload isn't destroyed. Meaning the score doesn't reset when loading onto another scene and keeps track
         DontDestroyOnLoad(this.gameObject);
 
         if (FindObjectsOfType(this.GetType()).Length > 1)

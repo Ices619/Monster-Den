@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
 {
+    //Sets a bunch of variables i want to use for the sprite of the UI and Health System
     public int Health;
     public int MaxhHealth;
 
@@ -19,7 +20,7 @@ public class HealthDisplay : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // Update keeps track of the players health and displays the amount of health the player has left starting at 3
     void Update()
     {
         Health = playerHealth.Health;
